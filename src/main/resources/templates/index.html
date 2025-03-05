@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECR Deployment Lab</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+        }
+        .container {
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen">
+<div class="container bg-white p-10 rounded-xl text-center max-w-2xl w-full">
+    <div class="mb-8">
+        <svg class="mx-auto h-24 w-24 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"></path>
+        </svg>
+    </div>
+    <h1 class="text-4xl font-bold mb-4 text-gray-800">ECR Deployment Lab</h1>
+    <p class="text-xl text-gray-600 mb-6">Successfully Containerized and Deployed to Amazon ECR!</p>
+    <div class="bg-blue-50 p-6 rounded-lg">
+        <div class="flex justify-between mb-4">
+            <span class="font-semibold text-blue-800">Application Status:</span>
+            <span class="text-green-600 font-bold">🟢 Running</span>
+        </div>
+        <div class="flex justify-between">
+            <span class="font-semibold text-blue-800">Deployment Method:</span>
+            <span>GitHub Actions CI/CD</span>
+        </div>
+    </div>
+    <div class="mt-8">
+        <a href="https://github.com/yourusername/your-repo"
+           class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full transition duration-300 inline-block">
+            View GitHub Repository
+        </a>
+    </div>
+    <footer class="mt-8 text-sm text-gray-500">
+        © 2024 ECR Deployment Lab Project
+    </footer>
+</div>
+</body>
+</html>
