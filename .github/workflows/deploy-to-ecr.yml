@@ -40,7 +40,7 @@ jobs:
         env:
           ECR_REGISTRY: public.ecr.aws/g7n2o3k3
           ECR_REPOSITORY: week-4-lab-image
-          IMAGE_TAG: ${{ github.sha }}
+          IMAGE_TAG: Bernard-Essilfie
         run: |
           docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
           docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
