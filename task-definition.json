@@ -1,0 +1,34 @@
+{
+    "family": "W4ECSLab",
+    "containerDefinitions": [
+        {
+            "name": "ecs-lab-container",
+            "image": "public.ecr.aws/g7n2o3k3/week-4-lab-image:Bernard-Essilfie_ECRLab",
+            "portMappings": [
+                {
+                    "containerPort": 8080,
+                    "hostPort": 8080,
+                    "protocol": "tcp"
+                }
+            ],
+            "essential": true,
+            "logConfiguration": {
+                "logDriver": "awslogs",
+                "options": {
+                    "awslogs-group": "/ecs/W4ECSLab",
+                    "awslogs-region": "us-east-1",
+                    "awslogs-stream-prefix": "ecs",
+                    "awslogs-create-group": "true",
+                    "mode": "non-blocking",
+                    "max-buffer-size": "25m"
+                }
+            }
+        }
+    ],
+    "networkMode": "awsvpc",
+    "requiresCompatibilities": ["FARGATE"],
+    "cpu": "512",
+    "memory": "1024",
+    "executionRoleArn": "arn:aws:iam::985539758163:role/ecsTaskExecutionRole",
+    "taskRoleArn": "arn:aws:iam::985539758163:role/ecsTaskExecutionRole"
+}
